@@ -84,7 +84,7 @@ class FrontendController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return view();
     }
     public function category()
     {
