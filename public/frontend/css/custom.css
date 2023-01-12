@@ -1,0 +1,7 @@
+.currency::before{
+    content: '\09F3';
+}
+.custom_image{
+width: 100px;
+height: auto;
+}
