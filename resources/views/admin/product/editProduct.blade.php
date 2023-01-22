@@ -22,10 +22,15 @@
                         </select>
                         <span style="color: red">@error('category_id'){{$message}}@enderror</span>
                     </div>
-                    <div class="col-md-12 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" name="name" value="{{$data->name}}">
                         <span style="color: red">@error('name'){{$message}}@enderror</span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="slug">Slug</label>
+                        <input type="text" class="form-control" name="slug" value="{{$data->slug}}">
+                        <span style="color: red">@error('slug'){{$message}}@enderror</span>
                     </div>
                     <div class="col-md-12 mb-3">
                         <label for="small_description">Small Description</label>

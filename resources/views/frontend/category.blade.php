@@ -8,17 +8,18 @@
                 <div class="col-md-12">
                     <h2>All Categories</h2>
                         <div class="row">
-
                                 @foreach($categories as $item)
                                     <div class="col-md-3 mt-3">
-                                        <div class="card">
-                                            <img src="{{asset('assets/uploads/category/'.$item->image)}}" class="">
-                                            <div class="card-body">
-                                                <h5>{{$item->name}}</h5>
-                                                <span class="float-start"> {{$item->description}}</span>
-                                                {{--                                        <span class="float-end"> <s>{{$item->selling_price}}</s> </span>--}}
-                                            </div>
-                                        </div>
+                                       <a href="{{url('category/'.$item->slug)}}">
+                                           <div class="card">
+                                               <img src="{{asset('assets/uploads/category/'.$item->image)}}" class="">
+                                               <div class="card-body">
+                                                   <h5>{{$item->name}}</h5>
+                                                   <span class="float-start"> {{$item->description}}</span>
+                                                   {{--                                        <span class="float-end"> <s>{{$item->selling_price}}</s> </span>--}}
+                                               </div>
+                                           </div>
+                                       </a>
                                     </div>
                                 @endforeach
                             </div>

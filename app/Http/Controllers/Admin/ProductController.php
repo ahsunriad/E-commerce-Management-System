@@ -61,6 +61,7 @@ class ProductController extends Controller
         $product = new Product();
         $product->category_id = $request->input('category_id');
         $product->name = $request->input('name');
+        $product->slug = $request->input('slug');
         $product->small_description = $request->input('small_description');
         $product->description = $request->input('description');
         $product->original_price = $request->input('original_price');
@@ -125,6 +126,7 @@ class ProductController extends Controller
         $request->validate([
             'category_id',
             'name',
+            'slug',
             'small_description',
             'description',
             'original_price',
@@ -141,6 +143,7 @@ class ProductController extends Controller
         $product=Product::find($id);
 //        $product->category_id = $request->input('category_id');
         $product->name = $request->input('name');
+        $product->slug = $request->input('slug');
         $product->small_description = $request->input('small_description');
         $product->description = $request->input('description');
         $product->original_price = $request->input('original_price');

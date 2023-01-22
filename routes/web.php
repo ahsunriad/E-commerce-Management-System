@@ -20,6 +20,8 @@ Route::get('/', function () {
 });
 Route::get('homepage',[FrontendController::class, 'index']);
 Route::get('categories',[FrontendController::class, 'category']);
+Route::get('category/{slug}', [FrontendController::class, 'viewCategory']);
+Route::get('category/{categorySlug}/{productSlug}', [FrontendController::class, 'viewProduct']);
 
 Auth::routes();
 
