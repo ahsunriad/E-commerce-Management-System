@@ -106,11 +106,11 @@ class FrontendController extends Controller
     public function viewProduct($categorySlug, $productSlug){
         if(Category::where('slug',$categorySlug)->exists()){
             if(Product::where('slug',$productSlug)->exists()){
-                $products = Product::where('category_id', $category->id)->get();
-                return view('frontend.products.index', compact('',''));
+                $products = Product::where('slug',$productSlug)->first();
+                return view('frontend.products.view', compact('products' ));
             }
             else{
-                redirect('');
+                redirect('frontend.products.index');
             }
         }
         else{
