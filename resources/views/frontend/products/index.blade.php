@@ -3,7 +3,7 @@
 @section('content')
     <div class="py-3 mb-4 shadow-sm bg-warning border-top">
         <div class="container">
-            <h5 class="mb-0">{{$category->name}}</h5>
+            <h5 class="mb-0"><a href="{{url('categories')}}">Category</a> / {{$category->name}}</h5>
         </div>
     </div>
     <div class="row">
